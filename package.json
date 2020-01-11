@@ -21,6 +21,7 @@
   },
   "scripts": {
     "start": "cross-env PORT=8080 && craco start",
+    "ng:start": "git add . && git commit -a && git push",
     "build": "craco build",
     "test": "craco test",
     "eject": "craco eject"
