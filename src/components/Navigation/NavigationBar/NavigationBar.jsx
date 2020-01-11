@@ -1,8 +1,11 @@
 import React, { PureComponent } from 'react';
 import { Layout } from 'antd';
-import { NavigationBarWrapper } from './NavigationBar.styles.js';
+import { NavigationBarWrapper, NavigationBarIcons, NavigationBarHeader, NavigationBarLinks, NavigationRouter  } from './NavigationBar.styles.js';
+import IconLinks from '@/components/Navigation/IconLinks/IconLinks';
+import NavigationLinks from '@/components/Navigation/NavigationLinks/NavigationLinks';
 
 const { Header } = Layout;
+
 
 class NavigationBar extends PureComponent { 
   constructor(props) {
@@ -23,7 +26,20 @@ class NavigationBar extends PureComponent {
     }
     return (
       <NavigationBarWrapper>
-          <Header>My Header</Header>
+          <Header>
+            <NavigationBarLinks span={8}>
+              <NavigationLinks/>
+            </NavigationBarLinks>
+            <NavigationBarHeader span={8}>
+              <NavigationRouter to="/">
+                Dalwy Media
+              </NavigationRouter>
+            </NavigationBarHeader>
+            <NavigationBarIcons span={8}>
+              <IconLinks/>
+            </NavigationBarIcons>
+          
+          </Header>
       </NavigationBarWrapper>
     );
   }

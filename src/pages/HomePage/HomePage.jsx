@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import {Typography} from 'antd';
 // import PropTypes from 'prop-types';
 import { HomePageWrapper,HomePageGroup } from './HomePage.styles.js';
-
+import  logo  from 'assets/logo.svg'
 const {Title, Text, Paragraph} = Typography;
 
 class HomePage extends PureComponent { 
@@ -49,6 +49,7 @@ class HomePage extends PureComponent {
     }
     return (
       <HomePageWrapper className="HomePageWrapper">
+        <img src={logo} alt="Bernie 2020"></img>
         <HomePageGroup>
           <Title>This is stupid</Title>
           <Text> Maybe he needs a bit of help here</Text>
